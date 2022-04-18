@@ -94,7 +94,6 @@ if __name__ == '__main__':
             threading.Thread(target=send_request, args=()).start()
         except Exception as e:
             log.error(e)
-            print(e)
 
         shell = listen(parse.lport, timeout=10).wait_for_connection()
         shell.interactive()
